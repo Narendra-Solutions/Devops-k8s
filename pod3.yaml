@@ -1,0 +1,11 @@
+#container portexpose
+kind: Pod
+apiVersion: v1
+metadata:
+   name: portexpose
+spec:
+   containers:
+     - name: narendra
+       image: httpd   
+       ports: 
+         - containerPort: 80

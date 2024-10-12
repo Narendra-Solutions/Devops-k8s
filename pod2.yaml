@@ -1,0 +1,15 @@
+#set the env variables for running container
+Kind: Pod
+apiVersion: v1
+metadata:
+   name: enivernment
+spec:
+   containers:
+      - name: env
+        image: ubuntu
+        command: ["/bin/bash", "-c", "while true; do echo $ORG-$SESSION; sleep 5 ; done"]
+        env:
+        - name: ORG
+          value: hello
+        - name: SESSION
+          value: narendra

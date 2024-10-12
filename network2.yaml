@@ -1,0 +1,12 @@
+# pod to pod communication by using ip address or DNS name
+kind: Pod
+apiVersion: v1
+metadata: 
+   name: microservice2
+spec: 
+   containers: 
+     - name: c01
+       image: nginx
+       ports:
+         - containerPort: 80
+    

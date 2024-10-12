@@ -1,0 +1,14 @@
+#creating two running containers in kubernets pod
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+     - name: main
+       image: ubuntu
+       command: ["/bin/bash", "-c", "while true; do echo Hello-NARENDRA; sleep 10 ; done"]
+     - name: sidecar
+       image: centos
+       command:   ["/bin/bash", "-c", "while true; do echo Hello-JHANU; sleep 10 ; done"]
+        

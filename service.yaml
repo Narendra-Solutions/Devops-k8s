@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: mydeploy
+spec:
+   replicas: 2
+   selector:           # Corrected from 'selectors'
+     matchLabels:      # Corrected from 'matchLables'
+       name: deployment
+   template:
+     metadata:
+       name: testpod8
+       labels:         # Corrected from 'lables'
+         name: deployment
+     spec:
+       containers:
+         - name: c00
+           image: httpd
+           ports:
+             - containerPort: 80

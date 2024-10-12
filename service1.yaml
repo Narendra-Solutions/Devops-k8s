@@ -1,0 +1,13 @@
+creating CulsterIP for deployment server by using service
+kind: Service
+apiVersion: v1
+metadata:
+  name: demoservice
+spec:
+   Port:
+   - port: 80
+     targetport: 80
+   selector:
+     name: deployment
+   type: NodePort
+   

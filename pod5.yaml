@@ -1,0 +1,13 @@
+#labels & selectros
+kind: Pod
+apiVersion: v1
+metadata:
+   name: labelspod
+   labels:
+      myname: narendra
+      myorg: jhanu
+spec:
+   containers:
+       - name: labels
+         image: centos
+         command: ["/bin/bash", "-c", "while true; do echo Hello-Narendra; sleep 5 ; done"]   
